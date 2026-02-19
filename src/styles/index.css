@@ -1,0 +1,101 @@
+/**
+ * VBWD View Component Styles
+ * Import this file to include all component styles and CSS variables
+ */
+
+@import './variables.css';
+
+/* Base reset for components */
+.vbwd-reset,
+.vbwd-reset * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography utilities */
+.vbwd-text-xs { font-size: 0.75rem; line-height: 1rem; }
+.vbwd-text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.vbwd-text-base { font-size: 1rem; line-height: 1.5rem; }
+.vbwd-text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.vbwd-text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.vbwd-text-2xl { font-size: 1.5rem; line-height: 2rem; }
+
+.vbwd-font-normal { font-weight: 400; }
+.vbwd-font-medium { font-weight: 500; }
+.vbwd-font-semibold { font-weight: 600; }
+.vbwd-font-bold { font-weight: 700; }
+
+/* Spacing utilities */
+.vbwd-m-0 { margin: 0; }
+.vbwd-m-1 { margin: 0.25rem; }
+.vbwd-m-2 { margin: 0.5rem; }
+.vbwd-m-3 { margin: 0.75rem; }
+.vbwd-m-4 { margin: 1rem; }
+
+.vbwd-p-0 { padding: 0; }
+.vbwd-p-1 { padding: 0.25rem; }
+.vbwd-p-2 { padding: 0.5rem; }
+.vbwd-p-3 { padding: 0.75rem; }
+.vbwd-p-4 { padding: 1rem; }
+
+.vbwd-gap-1 { gap: 0.25rem; }
+.vbwd-gap-2 { gap: 0.5rem; }
+.vbwd-gap-3 { gap: 0.75rem; }
+.vbwd-gap-4 { gap: 1rem; }
+
+/* Display utilities */
+.vbwd-hidden { display: none; }
+.vbwd-block { display: block; }
+.vbwd-inline { display: inline; }
+.vbwd-inline-block { display: inline-block; }
+.vbwd-flex { display: flex; }
+.vbwd-inline-flex { display: inline-flex; }
+.vbwd-grid { display: grid; }
+
+/* Flex utilities */
+.vbwd-flex-row { flex-direction: row; }
+.vbwd-flex-col { flex-direction: column; }
+.vbwd-flex-wrap { flex-wrap: wrap; }
+.vbwd-flex-nowrap { flex-wrap: nowrap; }
+.vbwd-items-start { align-items: flex-start; }
+.vbwd-items-center { align-items: center; }
+.vbwd-items-end { align-items: flex-end; }
+.vbwd-justify-start { justify-content: flex-start; }
+.vbwd-justify-center { justify-content: center; }
+.vbwd-justify-end { justify-content: flex-end; }
+.vbwd-justify-between { justify-content: space-between; }
+
+/* Width utilities */
+.vbwd-w-full { width: 100%; }
+.vbwd-w-auto { width: auto; }
+.vbwd-max-w-full { max-width: 100%; }
+
+/* Text alignment */
+.vbwd-text-left { text-align: left; }
+.vbwd-text-center { text-align: center; }
+.vbwd-text-right { text-align: right; }
+
+/* Colors */
+.vbwd-text-primary { color: var(--vbwd-color-primary); }
+.vbwd-text-success { color: var(--vbwd-color-success); }
+.vbwd-text-danger { color: var(--vbwd-color-danger); }
+.vbwd-text-warning { color: var(--vbwd-color-warning); }
+.vbwd-text-muted { color: var(--vbwd-color-text-muted); }
+
+.vbwd-bg-primary { background-color: var(--vbwd-color-primary); }
+.vbwd-bg-surface { background-color: var(--vbwd-color-surface); }
+.vbwd-bg-white { background-color: white; }
+
+/* Visibility */
+.vbwd-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

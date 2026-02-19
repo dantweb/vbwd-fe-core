@@ -1,0 +1,102 @@
+/**
+ * VBWD View Component CSS Variables
+ * Override these variables to customize the component library theme
+ */
+
+:root {
+  /* Colors - Primary */
+  --vbwd-color-primary: #3b82f6;
+  --vbwd-color-primary-light: rgba(59, 130, 246, 0.1);
+  --vbwd-color-primary-dark: #2563eb;
+
+  /* Colors - Secondary */
+  --vbwd-color-secondary: #6b7280;
+  --vbwd-color-secondary-light: #f3f4f6;
+  --vbwd-color-secondary-dark: #374151;
+
+  /* Colors - Success */
+  --vbwd-color-success: #10b981;
+  --vbwd-color-success-light: #ecfdf5;
+  --vbwd-color-success-dark: #065f46;
+
+  /* Colors - Danger */
+  --vbwd-color-danger: #ef4444;
+  --vbwd-color-danger-light: #fef2f2;
+  --vbwd-color-danger-dark: #991b1b;
+
+  /* Colors - Warning */
+  --vbwd-color-warning: #f59e0b;
+  --vbwd-color-warning-light: #fffbeb;
+  --vbwd-color-warning-dark: #92400e;
+
+  /* Colors - Info */
+  --vbwd-color-info: #3b82f6;
+  --vbwd-color-info-light: #eff6ff;
+  --vbwd-color-info-dark: #1e40af;
+
+  /* Colors - Neutral */
+  --vbwd-color-text: #374151;
+  --vbwd-color-text-muted: #9ca3af;
+  --vbwd-color-border: #e5e7eb;
+  --vbwd-color-surface: #f9fafb;
+  --vbwd-color-surface-hover: #f3f4f6;
+  --vbwd-color-background: #ffffff;
+
+  /* Shadows */
+  --vbwd-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --vbwd-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --vbwd-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --vbwd-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Border Radius */
+  --vbwd-radius-sm: 0.25rem;
+  --vbwd-radius-md: 0.375rem;
+  --vbwd-radius-lg: 0.5rem;
+  --vbwd-radius-xl: 0.75rem;
+  --vbwd-radius-full: 9999px;
+
+  /* Component-specific */
+  --vbwd-button-radius: var(--vbwd-radius-md);
+  --vbwd-input-radius: var(--vbwd-radius-md);
+  --vbwd-card-radius: var(--vbwd-radius-lg);
+  --vbwd-modal-radius: var(--vbwd-radius-lg);
+  --vbwd-alert-radius: var(--vbwd-radius-lg);
+  --vbwd-dropdown-radius: var(--vbwd-radius-md);
+  --vbwd-pagination-radius: var(--vbwd-radius-md);
+  --vbwd-form-group-radius: var(--vbwd-radius-lg);
+  --vbwd-form-error-radius: var(--vbwd-radius-lg);
+
+  /* Container */
+  --vbwd-container-max-width: 1280px;
+  --vbwd-container-padding: 1rem;
+  --vbwd-container-padding-sm: 1.5rem;
+  --vbwd-container-padding-lg: 2rem;
+
+  /* Input */
+  --vbwd-input-padding-x: 0.75rem;
+  --vbwd-input-padding-y: 0.5rem;
+
+  /* Transitions */
+  --vbwd-transition-fast: 0.15s ease;
+  --vbwd-transition-normal: 0.2s ease;
+  --vbwd-transition-slow: 0.3s ease;
+}
+
+/* Dark mode support (optional - users can enable by adding .dark class to html/body) */
+.dark {
+  --vbwd-color-primary: #60a5fa;
+  --vbwd-color-primary-light: rgba(96, 165, 250, 0.15);
+  --vbwd-color-primary-dark: #3b82f6;
+
+  --vbwd-color-text: #f3f4f6;
+  --vbwd-color-text-muted: #9ca3af;
+  --vbwd-color-border: #374151;
+  --vbwd-color-surface: #1f2937;
+  --vbwd-color-surface-hover: #374151;
+  --vbwd-color-background: #111827;
+
+  --vbwd-color-success-light: rgba(16, 185, 129, 0.15);
+  --vbwd-color-danger-light: rgba(239, 68, 68, 0.15);
+  --vbwd-color-warning-light: rgba(245, 158, 11, 0.15);
+  --vbwd-color-info-light: rgba(59, 130, 246, 0.15);
+}
