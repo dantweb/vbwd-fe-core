@@ -1,5 +1,5 @@
 {
-  "name": "@vbwd/view-component",
+  "name": "@dantweb/view-component",
   "version": "0.1.0",
   "description": "Shared Vue 3 component library and SDK for VBWD applications",
   "type": "module",
