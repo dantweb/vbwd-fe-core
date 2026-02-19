@@ -1,5 +1,5 @@
 {
-  "name": "@dantweb/view-component",
+  "name": "vbwd-view-component",
   "version": "0.1.0",
   "description": "Shared Vue 3 component library and SDK for VBWD applications",
   "type": "module",
@@ -80,7 +80,6 @@
   "author": "VBWD Team",
   "license": "CC0-1.0",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
     "access": "public"
   }
 }
