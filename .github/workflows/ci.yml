@@ -25,11 +25,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run ESLint
-        run: npm run lint
-
-      - name: Run TypeScript check
-        run: npm run type-check
+      - name: Run style checks
+        run: ./bin/pre-commit-check.sh --style
 
   unit:
     name: Unit Tests
@@ -48,7 +45,7 @@ jobs:
         run: npm install
 
       - name: Run unit tests
-        run: npm run test:unit
+        run: ./bin/pre-commit-check.sh --unit
 
   build:
     name: Build
