@@ -15,7 +15,7 @@ module.exports = {
   rules: {
     '@typescript-eslint/no-explicit-any': 'warn',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^(vi|it|describe|beforeEach|afterEach)$' }],
     'vue/multi-word-component-names': 'off',
     'no-undef': 'off'
   },
