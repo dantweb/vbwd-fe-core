@@ -57,6 +57,13 @@ export class ApiClient {
         if (this.token) {
           config.headers.Authorization = `Bearer ${this.token}`;
         }
+        // For FormData uploads the browser must set Content-Type itself so it
+        // can include the multipart boundary. Remove the instance-level default
+        // 'application/json' header, otherwise Flask sees the wrong content-type
+        // and request.files comes back empty (→ 400 "No file part in request").
+        if (typeof FormData !== 'undefined' && config.data instanceof FormData) {
+          config.headers.delete('Content-Type');
+        }
         return config;
       },
       (error) => Promise.reject(error)
