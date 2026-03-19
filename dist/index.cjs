@@ -4,8 +4,8 @@ var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { en
 var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
 var _a;
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-const vue = require("vue");
 const axios = require("axios");
+const vue = require("vue");
 const pinia = require("pinia");
 const fs = require("fs");
 const path = require("path");
@@ -404,96 +404,6 @@ class PlatformSDK {
     return { ...this.translations };
   }
 }
-class ExtensionRegistry {
-  constructor() {
-    // reactive() makes computed() properties that read from this map
-    // re-evaluate whenever entries are added or removed.
-    __publicField(this, "extensions", vue.reactive(/* @__PURE__ */ new Map()));
-  }
-  /**
-   * Register a plugin's admin extension.
-   * Called from a plugin's install() or activate() hook.
-   */
-  register(pluginName, extension) {
-    this.extensions.set(pluginName, extension);
-  }
-  /**
-   * Remove a plugin's admin extension.
-   * Call from a plugin's deactivate() hook so sidebar items disappear.
-   */
-  unregister(pluginName) {
-    this.extensions.delete(pluginName);
-  }
-  /**
-   * Get all user-detail sections contributed by plugins.
-   */
-  getUserDetailsSections() {
-    const sections = [];
-    this.extensions.forEach((ext) => {
-      if (ext.userDetailsSections) {
-        sections.push(...ext.userDetailsSections);
-      }
-    });
-    return sections;
-  }
-  /**
-   * Get all nav sections registered by plugins.
-   * Because extensions is reactive(), any computed() reading this
-   * will re-run when the map is mutated.
-   */
-  getNavSections() {
-    const all = [];
-    this.extensions.forEach((ext) => {
-      if (ext.navSections) {
-        all.push(...ext.navSections);
-      }
-    });
-    return all;
-  }
-  /**
-   * Get all items to inject into the core Settings nav section.
-   */
-  getSettingsItems() {
-    const items = [];
-    this.extensions.forEach((ext) => {
-      if (ext.settingsItems) {
-        items.push(...ext.settingsItems);
-      }
-    });
-    return items;
-  }
-  /**
-   * Get all plan tab sections contributed by plugins.
-   */
-  getPlanTabSections() {
-    const sections = [];
-    this.extensions.forEach((ext) => {
-      if (ext.planTabSections) {
-        sections.push(...ext.planTabSections);
-      }
-    });
-    return sections;
-  }
-  /**
-   * Get extension by plugin name.
-   */
-  get(pluginName) {
-    return this.extensions.get(pluginName);
-  }
-  /**
-   * Check if extension exists.
-   */
-  has(pluginName) {
-    return this.extensions.has(pluginName);
-  }
-  /**
-   * Clear all extensions.
-   */
-  clear() {
-    this.extensions.clear();
-  }
-}
-const extensionRegistry = new ExtensionRegistry();
 class ApiError extends Error {
   constructor(message, status = 500) {
     super(message);
@@ -3574,7 +3484,6 @@ exports.createAuthGuard = createAuthGuard;
 exports.createCartStore = createCartStore;
 exports.createRoleGuard = createRoleGuard;
 exports.eventBus = eventBus;
-exports.extensionRegistry = extensionRegistry;
 exports.isValidSemver = isValidSemver;
 exports.loadPluginConfig = loadPluginConfig;
 exports.name = name;
