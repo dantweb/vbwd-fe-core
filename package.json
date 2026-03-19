@@ -78,7 +78,7 @@
     "plugin-system"
   ],
   "author": "VBWD Team",
-  "license": "CC0-1.0",
+  "license": "BSL-1.1",
   "publishConfig": {
     "access": "public"
   }
